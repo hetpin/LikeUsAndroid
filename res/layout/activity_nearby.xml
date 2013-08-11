@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/heart"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerInParent="true"
+        android:src="@drawable/blue_heart"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/profile_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:src="@drawable/no_avatar" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:text="My name" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_setting_2" />
+    </RelativeLayout>
+
+    <lib.touchgallery.GalleryWidget.GalleryViewPager
+        android:id="@+id/viewer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@+id/profile_bar" />
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_above="@+id/bottom_bar"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn_like"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_like" />
+
+        <ImageButton
+            android:id="@+id/btn_phone"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn_location"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_no_corner"
+            android:onClick="onClick"
+            android:padding="10dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_location" />
+
+        <ImageButton
+            android:id="@+id/btn_liked_you"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_no_corner"
+            android:onClick="onClick"
+            android:padding="10dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_request" />
+
+        <ImageButton
+            android:id="@+id/btn_mutual_like"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_no_corner"
+            android:onClick="onClick"
+            android:padding="10dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_like" />
+
+        <ImageButton
+            android:id="@+id/btn_camera"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_no_corner"
+            android:onClick="onClick"
+            android:padding="10dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_camera" />
+    </LinearLayout>
+
+</RelativeLayout>
